@@ -1,0 +1,103 @@
+/* Blush theme */
+:root{
+    --bg:#fffafa; --panel:#fef6f6; --panel-alt:#fbecec;
+    --ink:#2a2a2a; --muted:#6e6e6e; --line:#e5dada; --accent:#e3c5c5;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Home link */
+  .home-link{
+    position: sticky; top: 10px; left: 10px;
+    padding: 14px 20px; background: var(--panel);
+    border-bottom: 1px solid var(--line);
+  }
+  .home-link a{
+    color: var(--ink); text-decoration: none; font-weight: 600;
+    border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px;
+  }
+  .home-link a:hover{ color: var(--accent); border-color: var(--accent); }
+  
+  /* Container for dynamic content */
+  #project-content{
+    max-width: 1000px; margin: 24px auto 60px; padding: 0 20px;
+  }
+  
+  /* Head */
+  .project-head{
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .project-head h1{
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 6px;
+  }
+  .project-head h2{
+    font-size: 1.2rem; color: var(--muted);
+  }
+  
+  /* Carousel */
+  .project-carousel{
+    display: grid; gap: 12px; justify-items: center; margin: 10px 0 20px;
+  }
+  .main-image img{
+    width: min(100%, 520px); height: auto; object-fit: contain;
+    border: 1px solid var(--line); background: var(--panel);
+    border-radius: 10px; padding: 6px;
+    box-shadow: 0 6px 16px rgba(227,197,197,.22);
+  }
+  .thumbnail-images{
+    display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+  }
+  .thumbnail{
+    width: 110px; height: 80px; object-fit: cover; cursor: pointer;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--panel-alt);
+    transition: transform .15s ease, border-color .15s ease;
+    filter: grayscale(20%);
+  }
+  .thumbnail:hover{
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+  
+  /* Abstract */
+  .project-abstract{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .project-abstract p{
+    color: var(--ink);
+    font-size: 1rem;
+  }
+  
+  /* Citations */
+  .citations{
+    padding: 14px 18px; margin-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    word-wrap: break-word; overflow-wrap: anywhere;
+  }
+  .citations a{
+    color: var(--ink); text-decoration: none; border-bottom: 1px dashed var(--line);
+  }
+  .citations a:hover{
+    color: var(--accent); border-bottom-color: var(--accent);
+  }
+  
+  /* Responsive */
+  @media (min-width: 900px){
+    .project-carousel{
+      grid-template-columns: 520px 1fr;
+      align-items: start;
+    }
+    .main-image{ order: 1; }
+    .thumbnail-images{ order: 2; justify-content: flex-start; }
+  }
+  

@@ -1,0 +1,75 @@
+{
+	"projects": [
+		{
+			"name": "Kaitlyns Card Game",
+			"subdomain": "kaitlyns_card_game",
+			"category": [
+				"Software-Based",
+				"C++",
+				"lead"
+			],
+			"subtitle": "Designed, coded and implemented a poker-like online card game",
+			"abstract": "A C++-coded, terminal-based card game designed to provide an engaging and family-friendly twist on traditional poker mechanics. This game introduces players to strategic thinking through simplified rules that emphasize matching card ranks and competing against a dealer. Players manage an initial balance, place bets, and navigate tie-breaker scenarios with unique gameplay mechanics, such as dropping cards or calculating hand values. The game features a randomized merchant system where players can purchase items to enhance their experience. Additionally, players can save their balance and inventory to a file for progress tracking. This project highlights the development of an accessible and enjoyable terminal-based gaming experience, blending coding and gameplay design into a seamless interactive experience. See below for the GitHub link containing the playable game, code and all files:",
+			"mainimg": "gamepic3.png",
+			"images": [
+				"gamepic3.png",
+				"game1pic.png",
+				"gamepic2.png"
+			],
+			"citations": [
+				"https://github.com/kaitlynsamuelian/KaitlynSamuelian-CardGame.git"
+			]
+		},
+		{
+			"name": "File Simulator",
+			"subdomain": "filesim",
+			"category": [
+				"Software-Based",
+				"C++",
+				"co-lead"
+			],
+			"subtitle": "Designed, coded, and implemented a command-line file system simulator",
+			"collaborators": [
+				"Riley Hill)"
+				
+			],
+			"abstract": "A project focused on creating an interactive and realistic file system simulator that mimics real-world file operations through command-line interaction. This program allows users to simulate disk operations by entering commands to manage files and directories, such as creating files, editing file data, and removing files or directories. Users can explore additional functionality, including viewing the file system's directory structure with commands like tree and ls, navigating through directories with cd, and managing files with operations like mv, rm, and touch. The simulator also provides useful features like displaying file statistics and contents (stat and cat), printing the current directory's path (pwd), and searching for files within the file system. The project utilizes CMake and the Make system to build and manage the compilation process, ensuring an efficient and consistent setup for development. This project showcases the design and implementation of a command-line tool that replicates the functionality of a real-world file system, enabling users to practice managing files and directories in a safe and controlled environment.Please see the link below for The GitHub page containing the simulator and all the code:",
+			"mainimg": "file1.png",
+			"images": [
+				"file1.png",
+				"file2.png",
+				"file3.png"
+			],
+			"citations": [
+				 "https://github.com/kaitlynsamuelian/KaitlynSamuelian-FileSimulator.git"
+			]
+		},
+		{
+			"name": "Virtual Reality- 360 world",
+			"subdomain": "vr-360-world",
+			"category": [
+				"Software-Based",
+				"Glitch",
+				"AFrame",
+				"VR",
+				"lead"
+			],
+			"subtitle": "Designed and developed a vibrant pink-themed virtual reality environment using A-Frame and Glitch.",
+						
+			"abstract": "A project centered on crafting an immersive and visually stunning VR world, Pink Petal Heaven transports users to a dreamlike meadow bursting with shades of pink. This interactive environment combines a custom equirectangular sky image with two intricately designed 3D models to create a harmonious blend of nature and fantasy. Visitors can explore the serene landscape, where flowers of varying shapes and sizes surround them, evoking a sense of tranquility and wonder.",
+			
+			"mainimg": "proj3.1.png",
+			"images": [
+				"proj3.1.png",
+				"proj3.2.jpg",
+				"proj3.3.png"
+			],
+			
+			"citations": [
+		
+				"https://github.com/kaitlynsamuelian/PinkPetalHeavn-360World.git"
+
+			]
+		}
+	]
+}
