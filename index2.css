@@ -1,0 +1,78 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+/* Blush theme */
+:root{
+  --bg: #fffafa;        /* page bg: very light blush */
+  --panel: #fef6f6;     /* surfaces / nav */
+  --panel-alt: #fbecec; /* alt surface */
+  --ink: #2a2a2a;       /* primary text */
+  --muted: #6e6e6e;     /* secondary text */
+  --line: #e5dada;      /* borders/dividers */
+  --accent: #e3c5c5;    /* hover/active */
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* Nav */
+.navbar{
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+.navbar .brand{
+  font-weight: 700; letter-spacing:.04em; text-decoration:none; color:var(--ink);
+  border:1px solid var(--line); padding:6px 10px; border-radius:999px;
+}
+.navbar .nav-links a{
+  text-decoration:none; color:var(--ink); margin-left:20px; opacity:.9; font-weight:600;
+}
+.navbar .nav-links a:hover{ opacity:1; color: var(--accent); }
+
+/* Header */
+header{
+  padding: 96px 20px 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+header h1{ font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing:.02em; }
+header p{ font-size: 1.1rem; color: var(--muted); margin-top: 8px; }
+
+/* Sections */
+.section{ padding: 56px 20px; max-width: 900px; margin: 0 auto; scroll-margin-top: 70px; }
+.section h2{
+  font-size: 1.2rem; letter-spacing:.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 18px;
+  border-bottom: 1px solid var(--line); padding-bottom: 8px;
+}
+#about p{ padding: 0 6vw; }
+
+/* Skills */
+#skills .skill{ text-align: left; max-width: 620px; margin: 0 auto 20px; }
+#skills .skill p{ margin-bottom: 6px; color: var(--ink); }
+#skills .skill-bar{
+  width: 100%; background: var(--panel-alt);
+  border: 1px solid var(--line); height: 14px; border-radius: 999px; overflow: hidden;
+}
+#skills .skill-fill{
+  height: 100%; background: var(--accent); transition: width 1.2s ease;
+}
+
+/* Footer */
+footer{
+  text-align: center; padding: 24px 20px; background: var(--panel);
+  border-top: 1px solid var(--line); color: var(--muted); margin-top: 20px;
+}
+
+/* Links */
+a{ color: inherit; }
+a:hover{ color: var(--accent); }

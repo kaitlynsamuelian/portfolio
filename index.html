@@ -6,56 +6,105 @@
   <title>Kaitlyn Samuelian — Portfolio</title>
   <link rel="stylesheet" href="index.css" />
 </head>
-<body>
+<body id="top">
+  <!-- NAV -->
   <nav class="navbar">
     <a href="index.html" class="brand">KS</a>
     <div class="nav-links">
+      <a class="active" href="#top">Home</a>
+      <a href="projects.html">Projects</a>
       <a href="#about">About</a>
       <a href="assets/resume.pdf" target="_blank" rel="noopener" aria-label="Open résumé PDF">Resume</a>
-      <a href="#skills">Skills</a>
-      <a href="projects.html">Projects</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <header>
-    <h1>Kaitlyn Samuelian</h1>
-    <p>Web Developer • Designer • Creator</p>
+  <!-- ARTSY HERO -->
+  <header class="hero" aria-label="Intro">
+    <div class="hero__badge">
+      <div class="badge__emblem">K</div>
+      <div class="badge__text">
+        <span class="sm">HEY! I’M</span>
+        <span class="name">KAITLYN</span>
+      </div>
+    </div>
+
+    <h1 class="hero__title" aria-label="Kaitlyn Samuelian">
+      <span class="title__layer title__outline">KAITLYN&nbsp;SAMUELIAN</span>
+      <span class="title__layer title__fill">KAITLYN&nbsp;SAMUELIAN</span>
+      <span class="title__grain" aria-hidden="true"></span>
+    </h1>
+
+    <div class="hero__cta">
+      <a class="pill" href="projects.html">VIEW WORK</a>
+      <a class="pill pill--ghost" href="assets/resume.pdf" target="_blank" rel="noopener">RÉSUMÉ</a>
+    </div>
+
+    <div class="hero__footer">
+      <div class="col">
+        <p>(01) BRAND</p>
+        <p>(02) MOTION</p>
+      </div>
+      <div class="col">
+        <p>(03) UI &amp; UX</p>
+        <p>(04) STRATEGY</p>
+      </div>
+      <div class="col right">
+        <p>SAY HELLO</p>
+        <p><a href="mailto:kaitlyn.samuelian@example.com">kaitlyn.samuelian@example.com</a></p>
+      </div>
+    </div>
   </header>
 
+  <!-- PROJECTS PREVIEW (uses your existing JSON via projects.js) -->
+  <main>
+    <header class="projects-header">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="filters">
+        <button class="on" data-filter="all">All</button>
+        <button data-filter="Software-Based">Software-Based</button>
+        <button data-filter="VR">VR</button>
+      </div>
+    </header>
+
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <!-- ABOUT -->
   <section id="about" class="section">
-    <h2>About Me</h2>
+    <h2 class="section-title">About</h2>
     <p>
-      I’m a CU Boulder Creative Technology & Design major with a CS minor. I build clean,
-      human-centered interfaces and practical software, with a growing focus in UX/UI.
+      I’m a product-minded creative working across brand, motion, and UI/UX.
+      I love turning messy ideas into crisp, shippable experiences.
     </p>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skill">
-      <p>HTML</p>
-      <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
-    </div>
-    <div class="skill">
-      <p>Python</p>
-      <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
-    </div>
-    <div class="skill">
-      <p>C++</p>
-      <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
-    </div>
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills">
+      <li>UI/UX Design</li>
+      <li>Prototyping</li>
+      <li>Motion/Brand</li>
+      <li>C++ / JS</li>
+    </ul>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p><a href="mailto:kaitlynsam3@gmail.com">kaitlynsam3@gmail.com</a></p>
-    <p><a href="mailto:kaitlyn.samuelian@colorado.edu">kaitlyn.samuelian@colorado.edu</a></p>
-    <p><a href="tel:+13103442125">+1 (310) 344-2125</a></p>
+    <h2 class="section-title">Contact</h2>
+    <p>
+      Email me at
+      <a href="mailto:kaitlyn.samuelian@example.com">kaitlyn.samuelian@example.com</a>
+      or connect via the resume.
+    </p>
   </section>
 
-  <footer>
+  <footer class="footer">
     <p>© 2025 Kaitlyn Samuelian</p>
   </footer>
+
+  <!-- Uses your existing JSON and card renderer -->
+  <script src="projects.js" type="module"></script>
 </body>
 </html>
