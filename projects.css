@@ -151,5 +151,19 @@
     border-top: 1px solid var(--line); padding: 24px 20px; text-align: center;
     color: var(--muted); background: var(--panel);
   }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    body{ padding-top: 140px; }
+    .navbar{ padding: 15px 20px; flex-direction: column; gap: 15px; }
+    .navbar .nav-links{ gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .wrap{ padding: 20px; }
+    .grid{ grid-template-columns: 1fr; }
+  }
+
+  /* Tablet responsive */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .grid{ grid-template-columns: repeat(2, 1fr); }
+  }
   
   
