@@ -1,44 +1,95 @@
-/* Blush theme */
+/* Modern professional theme */
 :root{
-    --bg:#fffafa; --panel:#fef6f6; --panel-alt:#fbecec;
-    --ink:#2a2a2a; --muted:#6e6e6e; --line:#e5dada; --accent:#e3c5c5;
-  }
+  --bg: #fafbfc;        /* clean white background */
+  --panel: #ffffff;     /* pure white surfaces */
+  --panel-alt: #f8f9fa; /* subtle gray for alt surfaces */
+  --ink: #1a1a1a;       /* deep black for primary text */
+  --muted: #6b7280;     /* professional gray for secondary text */
+  --line: #e5e7eb;      /* clean borders */
+  --accent: #3b82f6;    /* professional blue accent */
+  --accent-hover: #2563eb; /* darker blue for hover */
+  --success: #10b981;   /* green for success states */
+  --warning: #f59e0b;   /* amber for highlights */
+}
   *{ box-sizing:border-box; margin:0; padding:0; }
   body{
     background: var(--bg);
     color: var(--ink);
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
     line-height: 1.6;
+    padding-top: 80px;
   }
   
-  /* Home link */
-  .home-link{
-    position: sticky; top: 10px; left: 10px;
-    padding: 14px 20px; background: var(--panel);
-    border-bottom: 1px solid var(--line);
+  /* Navbar */
+  .navbar{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding: 20px 40px; 
+    border-bottom: 1px solid var(--line); 
+    background: var(--panel);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-  .home-link a{
-    color: var(--ink); text-decoration: none; font-weight: 600;
-    border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px;
+  .navbar .brand{ 
+    font-weight: 700; 
+    letter-spacing: 0.1em; 
+    color: var(--ink);
+    font-size: 0.9rem;
   }
-  .home-link a:hover{ color: var(--accent); border-color: var(--accent); }
+  .navbar .nav-links{
+    display: flex; 
+    gap: 40px;
+  }
+  .navbar .nav-links a{ 
+    text-decoration:none; 
+    color: var(--ink); 
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+  }
+  .navbar .nav-links a:hover{ 
+    color: var(--accent); 
+  }
+  .navbar .contact-btn{
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+  }
+  .navbar .contact-btn:hover{
+    color: var(--accent);
+  }
   
   /* Container for dynamic content */
   #project-content{
-    max-width: 1000px; margin: 24px auto 60px; padding: 0 20px;
+    max-width: 1200px; margin: 60px auto; padding: 0 40px;
   }
   
   /* Head */
   .project-head{
     color: var(--ink);
-    margin-bottom: 16px;
+    margin-bottom: 40px;
+    text-align: center;
   }
   .project-head h1{
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    margin-bottom: 6px;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
   }
   .project-head h2{
-    font-size: 1.2rem; color: var(--muted);
+    font-size: 1.3rem; 
+    color: var(--muted);
+    font-weight: 500;
   }
   
   /* Carousel */
@@ -69,12 +120,16 @@
   .project-abstract{
     background: var(--panel);
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 16px 18px;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
   .project-abstract p{
     color: var(--ink);
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: center;
   }
   
   /* Citations */
@@ -92,6 +147,24 @@
   }
   
   /* Responsive */
+  @media (max-width: 768px) {
+    .navbar{
+      padding: 20px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .navbar .nav-links{
+      gap: 20px;
+    }
+    #project-content{
+      padding: 0 20px;
+      margin: 40px auto;
+    }
+    .project-abstract{
+      padding: 30px 20px;
+    }
+  }
+  
   @media (min-width: 900px){
     .project-carousel{
       grid-template-columns: 520px 1fr;
