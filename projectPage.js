@@ -25,17 +25,6 @@ function loadProjectPage() {
         <h2>${project.subtitle || ''}</h2>
       </div>
 
-      <div class="project-carousel">
-        <div class="main-image">
-          <img id="main-img" src="images/${project.mainimg}" alt="${project.name}">
-        </div>
-        <div class="thumbnail-images">
-          ${(project.images || []).map(img => `
-            <img class="thumbnail" src="images/${img}" alt="${project.name}">
-          `).join('')}
-        </div>
-      </div>
-
       <div class="project-abstract">
         <p><strong>Abstract:</strong> ${project.abstract || ''}</p>
       </div>
@@ -44,16 +33,6 @@ function loadProjectPage() {
         ${renderCitations(project.citations || [])}
       </div>
     `;
-
-    // swap main image on thumb click
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const mainImg = document.getElementById('main-img');
-    thumbnails.forEach(thumbnail => {
-      thumbnail.addEventListener('click', function () {
-        mainImg.src = this.src;
-        mainImg.alt = this.alt;
-      });
-    });
   } else {
     mount.innerHTML = "<p>Project not found.</p>";
   }
