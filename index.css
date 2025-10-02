@@ -4,16 +4,16 @@ html, body { height: 100%; }
 
 /* Modern professional theme */
 :root{
-  --bg: #fafbfc;        /* clean white background */
-  --panel: #ffffff;     /* pure white surfaces */
-  --panel-alt: #f8f9fa; /* subtle gray for alt surfaces */
-  --ink: #1a1a1a;       /* deep black for primary text */
-  --muted: #6b7280;     /* professional gray for secondary text */
-  --line: #e5e7eb;      /* clean borders */
-  --accent: #3b82f6;    /* professional blue accent */
-  --accent-hover: #2563eb; /* darker blue for hover */
-  --success: #10b981;   /* green for success states */
-  --warning: #f59e0b;   /* amber for highlights */
+  --bg: #fafbfc;
+  --panel: #ffffff;
+  --panel-alt: #f8f9fa;
+  --ink: #1a1a1a;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --success: #10b981;
+  --warning: #f59e0b;
 }
 
 body{
